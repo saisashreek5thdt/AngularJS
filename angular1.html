@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="" ng-init="firstname='sai'">
+        <p>
+            Name: <input type="text" ng-model="name">
+        </p>
+        <h1>
+            Hello {{name}}
+        </h1>
+        <p ng-bind="name"></p>
+        
+        <p>
+            Your First Name <span ng-bind="firstname"></span>
+        </p>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>
+            First Name: <input type="text" ng-model="firstname">
+        </p>
+        
+        <br>
+        
+        <p>
+            Last Name: <input type="text" ng-model="lastname">
+        </p>
+        
+        <br>
+        
+        Full Name: {{firstname +""+ lastname}}
+        
+    </div>
+    
+    
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl', function($scope){
+          $scope.firstname = "Sai";
+          $scope.lastname = "Sashreek";    
+        });
+    </script>
+    
+</body>
+</html>

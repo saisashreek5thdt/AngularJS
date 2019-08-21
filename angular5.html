@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Angular Forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body ng-app="">
+    <form>
+        Pick a Topic <br>
+        <input type="radio" ng-model="myVar" value="robotics">Robotics <br>
+        <input type="radio" ng-model="myVar" value="ml">Machine Learning <br>
+        <input type="radio" ng-model="myVar" value="dl">Deep Learning <br>
+    </form>
+    
+    <div ng-switch="myVar">
+        <div ng-switch-when="robotics">
+             <h1>Robotics</h1>
+             <p>Welcome to a world of robotics.</p>
+        </div>
+        <div ng-switch-when="ml">
+             <h1>Machine Learning</h1>
+             <p>Welcome to a world of Machine Learning.</p>
+        </div>
+        <div ng-switch-when="dl">
+             <h1>Deep Learning</h1>
+             <p>Welcome to a world of Deep Learning.</p>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <form name="myForm">
+        <input name="myInput" ng-model="myInput" required>
+    </form>
+    
+    <p>The input's valid state is:</p>
+    <h1>{{myForm.myInput.$valid}}</h1>
+    
+</body>
+</html>
